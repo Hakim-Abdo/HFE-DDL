@@ -1,0 +1,2 @@
+# HFE-DDL-Hybrid-Feature-Engineering-and-Deep-Learning-for-Source-Code-Vulnerability-Detection
+HFE-DDL (Hybrid Feature Engineering and Deep Learning) is a novel approach for Source Code vulnerability detection that combines traditional feature engineering with deep learning techniques. This repository contains the complete implementation, including data preprocessing, model training, baseline comparisons, and comprehensive evaluation.
