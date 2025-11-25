@@ -33,14 +33,6 @@ HFE-DDL-Vulnerability-Detection/
 │   ├── 02_model_training.ipynb
 │   └── 03_results_analysis.ipynb
 │
-├── outputs/                       # Generated results and visualizations
-│   ├── hfe_ddl_results.csv
-│   ├── word2vec_results.csv
-│   ├── code2vec_results.csv
-│   ├── codebert_results.csv
-│   ├── detailed_performance_metrics.csv
-│   ├── comprehensive_performance_analysis.png
-│   └── average_confusion_matrices.png
 │
 ├── requirements.txt              # Python dependencies
 ├── run_experiment.py             # Main script to run complete experiment
@@ -149,6 +141,12 @@ history = hfe_ddl.train(X_tfidf, X_sequences, balanced_df['Vulnerability_status'
 baselines = BaselineModels()
 word2vec_results = baselines.run_word2vec_baseline(balanced_df)
 
+# Run Code2Vec baseline
+code2vec_results = baselines.run_code2vec_baseline(balanced_df, n_runs=1, n_folds=10) 
+    
+# Run codebert baseline
+codebert_results = baselines.run_codebert_baseline(balanced_df, n_runs=1, n_folds=10)
+
 # Evaluate results
 evaluator = Evaluator()
 evaluator.perform_statistical_tests(all_results)
@@ -168,14 +166,10 @@ evaluator.perform_statistical_tests(all_results)
 - Batch size: 32
 - Epochs: 15 (with early stopping)
 
-**Baseline Models:**
-- Word2Vec: 100 dimensions, window=5, skip-gram
-- Code2Vec: TF-IDF with code-specific token patterns
-- Random Forest: 100 estimators
 
 ### Experimental Setup
 - **Cross-validation**: 10-fold stratified
-- **Random seeds**: [42, 123, 456, 789, 999]
+- **Random seeds**: [42]
 - **Evaluation metrics**: F1-score, Accuracy, Precision, Recall, Specificity
 
 ##  Results Interpretation
@@ -259,13 +253,7 @@ model = hfe_ddl.build_model(
     lstm_units=64
 )
 
-# In baselines.py
-word2vec_features = baselines.extract_word2vec_features(
-    code_strings,
-    vector_size=100,
-    window=5,
-    min_count=1
-)
+
 ```
 
 ##  Troubleshooting
