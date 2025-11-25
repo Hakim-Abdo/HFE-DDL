@@ -19,9 +19,7 @@ HFE-DDL (Hybrid Feature Engineering and Deep Learning) is a novel approach for S
 HFE-DDL-Vulnerability-Detection/
 │
 ├── data/                          # Data directory
-│   ├── LVDAndro_APKs_Combined_Processed.csv    # Original dataset
-│   ├── LVDAndro_APKs_downsampled.csv           # Balanced dataset
-│   └── preprocessed_data.pkl      # Preprocessed features
+│   we have used LVDAndro APKs Dataset for downloa (https://github.com/softwaresec-labs/LVDAndro)
 │
 ├── src/                           # Source code
 │   ├── data_preprocessing.py      # Data loading and preprocessing
@@ -333,7 +331,7 @@ We welcome contributions! Please:
 
 ##  Acknowledgments
 
-- Dataset: LVDAndro APKs Dataset [LVDAndro APKs Dataset](https://github.com/softwaresec-labs/LVDAndro)
+- Dataset: LVDAndro APKs Dataset (https://github.com/softwaresec-labs/LVDAndro)
 - Libraries: TensorFlow, scikit-learn, Gensim, NLTK
 - Inspiration: Code2Vec, Word2Vec, and transformer-based approaches
 
