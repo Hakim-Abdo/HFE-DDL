@@ -1,24 +1,8 @@
-# HFE-DDL: Hybrid Feature Engineering and Deep Learning for Vulnerability Detection
-
-##  Overview
-
-HFE-DDL (Hybrid Feature Engineering and Deep Learning) is a novel approach for Source Code vulnerability detection that combines traditional feature engineering with deep learning techniques. This repository contains the complete implementation, including data preprocessing, model training, baseline comparisons, and comprehensive evaluation.
-
-###  Key Features
-
-- **Hybrid Architecture**: Combines TF-IDF features with sequence embeddings using LSTM
-- **Imbalanced Data Handling**: Automatic downsampling for balanced training
-- **Multiple Baselines**: Comparison with Word2Vec, Code2Vec, and CodeBERT
-- **Statistical Validation**: Paired t-tests and effect size analysis
-- **Reproducible Experiments**: Fixed random seeds and cross-validation
-- **Comprehensive Evaluation**: Detailed performance metrics and visualizations
-
-##  Repository Structure
 
 ```
 HFE-DDL-Vulnerability-Detection/
 │
-├── data/                          # Data directory
+├── dataset/                          # Data directory
 │   we have used LVDAndro APKs Dataset for download (https://github.com/softwaresec-labs/LVDAndro)
 │
 ├── src/                           # Source code
