@@ -18,7 +18,7 @@ HFE-DDL (Hybrid Feature Engineering and Deep Learning) is a novel approach for S
 ```
 HFE-DDL-Vulnerability-Detection/
 │
-├── data/                          # Data directory
+├── dataset/                          # Data directory
 │   we have used LVDAndro APKs Dataset for download (https://github.com/softwaresec-labs/LVDAndro)
 │
 ├── src/                           # Source code
